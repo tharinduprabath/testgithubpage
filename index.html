@@ -1,1 +1,38 @@
 <h1>hello</h1>
+[10:28] Diliru Munasingha
+
+<script>
+
+  // Detect the user's platform.
+
+  const platform = navigator.userAgent.toLowerCase();
+
+  const isAndroid = platform.includes("android");
+
+  const isIOS = platform.includes("iphone") || platform.includes("ipad");
+
+ 
+
+  // Redirect the user to the appropriate App Store.
+
+  if (isAndroid) {
+
+    window.location.href = "https://play.google.com/store/apps/details?id=team.moya.moya.stage";
+
+  } else if (isIOS) {
+
+    window.location.href = "https://apps.apple.com/us/app/moya-stage/id6446625148";
+
+  }
+
+ 
+
+  // Redirect the user to the website if they are not using a mobile device.
+
+  if (!isAndroid && !isIOS) {
+
+    window.location.href = "http://moya.team/";
+
+  }
+
+</script>
